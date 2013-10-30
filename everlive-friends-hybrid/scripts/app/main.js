@@ -36,12 +36,14 @@ var app = (function () {
 
 	var applicationSettings = {
 		emptyGuid: '00000000-0000-0000-0000-000000000000',
-		apiKey: 'EVERLIVE_API_KEY' //Put your API key here
+		apiKey: 'EVERLIVE_API_KEY', //Put your API key here
+        scheme: 'http'
 	};
 
 	// initialize Everlive SDK
 	var el = new Everlive({
-		apiKey: applicationSettings.apiKey
+		apiKey: applicationSettings.apiKey,
+        scheme: applicationSettings.scheme
 	});
 
 	var facebook = new IdentityProvider({
